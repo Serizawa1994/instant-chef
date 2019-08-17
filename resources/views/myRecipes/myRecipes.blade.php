@@ -44,9 +44,13 @@
                     </div>
                 </div>
             @else
-                <div class="row  offset-sm-3 col-sm-6">
-                    <p style="color: #ff0000; margin-bottom:50px; font-size:30px; padding-left:25px;"><strong>まだ ORDER が1件もありません!!</strong></p>
-                    {!! link_to_route("orderInputForm.get", "ORDER NOW !", [], ["class" => "btn btn-lg btn-primary", "style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;  width:100%;"]) !!}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center">
+                            <p style="color: #ff0000; margin-bottom:50px; font-size:30px;"><strong>まだ ORDER が1件もありません!!</strong></p>
+                            {!! link_to_route("orderInputForm.get", "ORDER NOW !", [], ["class" => "btn btn-lg btn-primary", "style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;  width:75%; margin-bottom:50px"]) !!}
+                        </div>
+                    </div>
                 </div>
             @endif
             
@@ -78,9 +82,13 @@
                     </div>
                 </div>
             @else
-                <div class="row  offset-sm-3 col-sm-6">
-                    <p style="color: #ff0000; margin-bottom:50px; font-size:30px; padding-left:25px;"><strong>まだレシピが1件もありません!!</strong></p>
-                    {!! link_to_route("allOrderList.get", "PROVIDE NOW!!", [], ["class" => "btn btn-lg btn-primary", "style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;  width:100%;"]) !!}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center">
+                            <p style="color: #ff0000; margin-bottom:50px; font-size:30px;"><strong>まだレシピが1件もありません!!</strong></p>
+                            {!! link_to_route("allOrderList.get", "PROVIDE NOW!!", [], ["class" => "btn btn-lg btn-primary", "style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;  width:75%; margin-bottom:50px;"]) !!}
+                        </div>
+                    </div>
                 </div>
             @endif
             
@@ -122,9 +130,13 @@
                     </div>
                 </div>
             @else
-                <div class="row  offset-sm-3 col-sm-6">
-                    <p style="color: #ff0000; margin-bottom:50px; font-size:30px; padding-left:25px;"><strong>まだお気に入りが1件もありません!!</strong></p>
-                    {!! link_to_route("recipeList.get", "ADD TO FAVORITES NOW!!", [], ["class" => "btn btn-lg btn-primary", "style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;  width:100%;"]) !!}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center">
+                            <p style="color: #ff0000; margin-bottom:50px; font-size:30px;"><strong>まだお気に入りが1件もありません!!</strong></p>
+                            {!! link_to_route("recipeList.get", "ADD TO FAVORITES NOW!!", [], ["class" => "btn btn-lg btn-primary", "style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;  width:75%; margin-bottom:50px;"]) !!}
+                        </div>
+                    </div>
                 </div>
             @endif
         @endif 

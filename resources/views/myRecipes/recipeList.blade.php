@@ -32,8 +32,12 @@
             </div>
             <a href="#top1738" style="margin-bottom:50px;">Top Of Recipe List</a>
         @else
-            <div class="row  offset-sm-3 col-sm-9">
-                <p style="color: #ff0000; margin-bottom:50px; font-size:30px; padding-left:20px;"><strong>まだ回答されたレシピが1件もありません!!</strong></p>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <p style="color: #ff0000; margin-bottom:50px; font-size:30px;"><strong>まだ回答されたレシピが1件もありません!!</strong></p>
+                    </div>
+                </div>
             </div>
         @endif
     </section>

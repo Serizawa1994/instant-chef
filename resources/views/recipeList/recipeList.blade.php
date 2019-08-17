@@ -25,16 +25,19 @@
                     @foreach($recipes as $recipe)
                         @if(!$recipe->user_id == null)
                             <tr>
-                                <td style="border-left: 3px solid #ff4500; border-bottom: 3px solid #ff4500;"><span style="font-size:20px;">{!! link_to_route("recipeListShow.get", "$recipe->title", ["id" => $recipe->id]); !!}</span></td>
-                            
-                                @if (Auth::user()->already_been_favorite($recipe->id))
-                                    {!! Form::open(['route' => ['favorites.unfavorite', $recipe->id], 'method' => 'delete']) !!}
-                                        <td class="text-right", style="border-right: 3px solid #ff4500; border-bottom: 3px solid #ff4500;">{!! Form::submit('Remove From Favorites', ['class' => 'btn btn-danger btn-sm',"style" => "background-color: #ffa07a; border-color: #ffffff; color: #ffffff;"]) !!}</td>
-                                    {!! Form::close() !!}
+                                @if(Auth::check())
+                                    <td style="border-left: 3px solid #ff4500; border-bottom: 3px solid #ff4500;"><span style="font-size:20px;">{!! link_to_route("recipeListShow.get", "$recipe->title", ["id" => $recipe->id]); !!}</span></td>
+                                    @if (Auth::user()->already_been_favorite($recipe->id))
+                                        {!! Form::open(['route' => ['favorites.unfavorite', $recipe->id], 'method' => 'delete']) !!}
+                                            <td class="text-right", style="border-right: 3px solid #ff4500; border-bottom: 3px solid #ff4500;">{!! Form::submit('Remove From Favorites', ['class' => 'btn btn-danger btn-sm',"style" => "background-color: #ffa07a; border-color: #ffffff; color: #ffffff;"]) !!}</td>
+                                        {!! Form::close() !!}
+                                    @else
+                                        {!! Form::open(['route' => ['favorites.favorite', $recipe->id], 'method' => 'store']) !!}
+                                            <td class="text-right", style="border-right: 3px solid #ff4500; border-bottom: 3px solid #ff4500;">{!! Form::submit('Add To Favorites', ['class' => 'btn btn-success btn-sm',"style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;"]) !!}</td>
+                                        {!! Form::close() !!}
+                                    @endif
                                 @else
-                                    {!! Form::open(['route' => ['favorites.favorite', $recipe->id], 'method' => 'store']) !!}
-                                        <td class="text-right", style="border-right: 3px solid #ff4500; border-bottom: 3px solid #ff4500;">{!! Form::submit('Add To Favorites', ['class' => 'btn btn-success btn-sm',"style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;"]) !!}</td>
-                                    {!! Form::close() !!}
+                                    <td style="border-left: 3px solid #ff4500; border-bottom: 3px solid #ff4500; border-right: 3px solid #ff4500;"><span style="font-size:20px;">{!! link_to_route("recipeListShow.get", "$recipe->title", ["id" => $recipe->id]); !!}</span></td>   
                                 @endif
                             </tr>
                         @endif
