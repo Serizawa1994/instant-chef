@@ -24,7 +24,7 @@
                     <div class="col-sm-12">
                         <div class="text-center">
                             {!! link_to_route("orderInputForm.get", "ORDER", [], ["class" => "btn btn-lg btn-primary", "style" => "width:75%; margin-top:30px; margin-bottom:20px; background-color:#ff4500; border-style: none; color: #ffffff;"]) !!}
-                            <p><img src="/Instant_Chef_img/order.jpg" alt="料理道具" style="width:300px; height:150px; margin-top: 30px; background-color:#c0c0c0;"></p>   
+                            <p><img src="/Instant_Chef_img/order.jpg" alt="料理道具" style="width:75%; height:150px; margin-top: 30px; background-color:#c0c0c0;"></p>   
                             <p style="margin-top:20px; margin-bottom:0; padding:0; color: #696969;">冷蔵庫に食材が残っていて困っている方はいませんか？</p>
                             <p style="margin:0; padding:0; color: #696969;">アレルギーのためレシピ探しに困っている方はいませんか？</p>
                             <p style="margin:0; padding:0; color: #696969;">そんなお困りのあなたはレシピを注文してみませんか？</p>
