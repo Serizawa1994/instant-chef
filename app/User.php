@@ -26,4 +26,49 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    public function order()
+    {
+        return $this->hasMany(Order::class);
+    }
+    
+    public function provide()
+    {
+        return $this->hasMany(Recipe::class);
+    }
+    
+    public function favorites()
+    {
+        return $this->belongsToMany(Recipe::class, 'recipe_user', 'user_id', 'recipe_id')->withTimestamps();
+    }
+    
+    public function add_to_favorites($recipeId){
+        
+        $exist = $this->already_been_favorite($recipeId);
+        
+        if($exist){
+        return false;
+        
+        }else{
+            $this->favorites()->attach($recipeId);
+        return true;
+        }
+    }
+    
+    public function remove_from_favorites($recipeId){
+        
+        $exist = $this->already_been_favorite($recipeId);
+        
+        if($exist){
+            $this->favorites()->detach($recipeId);
+        return true;
+        
+        }else{
+        return false;
+        }
+    }
+    
+    public function already_been_favorite($recipeId){
+        return $this->favorites()->where("recipe_id",$recipeId)->exists();
+    }
 }
