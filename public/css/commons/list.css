@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.table{
+    margin-top:20px;
+}
+
+.table .title .text-center{
+    border: 3px solid #ff4500;
+    background-color:#f5deb3;
+}
+
+.table .item{
+    border-left: 3px solid #ff4500;
+    border-right: 3px solid #ff4500;
+    border-bottom: 3px solid #ff4500;
+}
+
+.table span{
+    font-size:20px;
+}
+
+.table .not_anything p{
+    margin-bottom:50px;
+    color: #ff0000;
+    font-size:30px
+}

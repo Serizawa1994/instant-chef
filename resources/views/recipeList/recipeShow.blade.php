@@ -1,12 +1,7 @@
-<style>
-    .span{
-        color: #ff0000;
-    }
-</style>
-
 @extends('layouts.app')
 
 <link href="{{ secure_asset('/css/recipeList/recipeShow.css') }}" rel="stylesheet">
+<link href="{{ secure_asset('/css/commons/show.css') }}" rel="stylesheet">
 
 @section('content')
 
@@ -30,7 +25,7 @@
         <p><h1>{!! $recipe->title !!}</h1></p>
     </div>
     
-    <section class="wrapper">
+    <section class="show">
         <div class="row" id="order1543">
             <div class="col-sm-12">
                 <div class="form-group">

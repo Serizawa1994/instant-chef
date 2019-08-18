@@ -1,23 +1,6 @@
 @charset "utf-8";
 
-.top{
-    margin-top:50px;
-}
-
-.wrapper .item{
-    border: 3px solid #ff4500;
-    border-radius:3px;
-    background-color:#ff4500;
-    color:#ffffff;
-}
-
-.wrapper h2{
-    padding-left:10px;
-    border-radius:3px;
-    background-color:#f5deb3;
-}
-
-.wrapper .step p{
+.show .step p{
     margin-top:30px;
     padding-left:10px;
     background-color:#ffe4c4;
