@@ -4,10 +4,11 @@
     
     @include('commons.mineSelect')
     
-    
-    <div>
-        <img src="/Instant_Chef_img/scale-1209837_1920.jpg" alt="台所" style="width:100%; height:440px; margin: 0 auto 25px; background-color:#dcdcdc;">
-    </div>
+    <section>
+        <div>
+            <img src="/Instant_Chef_img/scale-1209837_1920.jpg" alt="台所" style="width:100%; height:440px; margin: 0 auto 25px; background-color:#dcdcdc;">
+        </div>
+    </section>
     
     <section>
         <p style="margin-top:5px; margin-bottom:0; padding:0; color: #696969;">このページでは、あなたが以前にしたオーダーを見ることができるほか、オーダーに対して提供されたレシピを見ることができます。</p>
@@ -114,14 +115,16 @@
                             </tr>
                             @foreach($favoriteRecipes as $recipe)
                                 <tr>
-                                    <td style="border-left: 3px solid #ff4500; border-bottom: 3px solid #ff4500;"><span style="font-size:20px;">{!! link_to_route("myFavoriteResipesShow.get", "$recipe->title", ["id" => $recipe->id]); !!}</span></td>
+                                    <td style="border-left: 3px solid #ff4500; border-right: 3px solid #ff4500;"><span style="font-size:20px;">{!! link_to_route("myFavoriteResipesShow.get", "$recipe->title", ["id" => $recipe->id]); !!}</span></td>
+                                </tr>
+                                <tr>
                                     @if (Auth::user()->already_been_favorite($recipe->id))
                                         {!! Form::open(['route' => ['favorites.unfavorite', $recipe->id], 'method' => 'delete']) !!}
-                                            <td class="text-right", style="border-right: 3px solid #ff4500; border-bottom: 3px solid #ff4500;">{!! Form::submit('Remove From Favorites', ['class' => 'btn btn-danger btn-sm',"style" => "background-color: #ffa07a; border-color: #ffffff; color: #ffffff;"]) !!}</td>
+                                            <td class="text-center", style="border-left: 3px solid #ff4500; border-right: 3px solid #ff4500; border-bottom: 3px solid #ff4500;">{!! Form::submit('Remove From Favorites', ['class' => 'btn btn-danger btn-sm',"style" => "background-color: #ffa07a; border-color: #ffffff; color: #ffffff;"]) !!}</td>
                                         {!! Form::close() !!}
                                     @else
                                         {!! Form::open(['route' => ['favorites.favorite', $recipe->id], 'method' => 'store']) !!}
-                                            <td class="text-right", style="border-right: 3px solid #ff4500; border-bottom: 3px solid #ff4500;">{!! Form::submit('Add To Favorites', ['class' => 'btn btn-success btn-sm',"style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;"]) !!}</td>
+                                            <td class="text-center", style="border-left: 3px solid #ff4500; border-right: 3px solid #ff4500; border-bottom: 3px solid #ff4500;">{!! Form::submit('Add To Favorites', ['class' => 'btn btn-success btn-sm',"style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;"]) !!}</td>
                                         {!! Form::close() !!}
                                     @endif
                                 </tr>

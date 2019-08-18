@@ -10,6 +10,20 @@
 
     @include('commons.mineSelect')
     
+    <section style="margin-top:50px;">
+        @if(Auth::check())
+            @if (Auth::user()->already_been_favorite($recipe->id))
+                {!! Form::open(['route' => ['favorites.unfavorite', $recipe->id], 'method' => 'delete']) !!}
+                    {!! Form::submit('Remove From Favorites', ['class' => 'btn btn-danger btn-sm',"style" => "background-color: #ffa07a; border-color: #ffffff; color: #ffffff;"]) !!}
+                {!! Form::close() !!}
+            @else
+                {!! Form::open(['route' => ['favorites.favorite', $recipe->id], 'method' => 'store']) !!}
+                    {!! Form::submit('Add To Favorites', ['class' => 'btn btn-success btn-sm',"style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;"]) !!}
+                {!! Form::close() !!}
+            @endif
+        @endif
+    </section> 
+    
     <div class="text-center">
         <p style="margin-top:50px;"><h1>{!! $recipe->title !!}</h1></p>
     </div>
@@ -93,4 +107,5 @@
                 </div>
             </div>
     </section>
+    
 @endsection

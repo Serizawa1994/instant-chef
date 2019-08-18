@@ -10,9 +10,11 @@
 
     @include('commons.mineSelect')
     
-    <div class="text-center">
-        <p style="margin-top:50px;"><h1>{!! $order->outline !!}</h1></p>
-    </div>
+    <section>
+        <div class="text-center">
+            <p style="margin-top:50px;"><h1>{!! $order->outline !!}</h1></p>
+        </div>
+    </section>
     
     <section>
         <div class="row">
