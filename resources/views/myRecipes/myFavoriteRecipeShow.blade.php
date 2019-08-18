@@ -20,11 +20,13 @@
                 {!! Form::submit('Add To Favorites', ['class' => 'btn btn-success btn-sm',"style" => "background-color: #ff4500; border-color: #ffffff; color: #ffffff;"]) !!}
             {!! Form::close() !!}
         @endif
-    </section>  
+    </section> 
     
-    <div class="text-center">
-        <p style="margin-top:50px;"><h1>{!! $recipe->title !!}</h1></p>
-    </div>
+    <section>
+        <div class="text-center">
+            <p style="margin-top:50px;"><h1>{!! $recipe->title !!}</h1></p>
+        </div>
+    </section>
     
     <section>
         <div class="row" id="order1543">

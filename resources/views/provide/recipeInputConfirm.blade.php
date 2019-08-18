@@ -120,4 +120,5 @@
             
         {!! Form::close() !!} 
     </section>
+    
 @endsection
