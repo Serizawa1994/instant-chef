@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 <link href="{{ secure_asset('/css/recipeList/recipeList.css') }}" rel="stylesheet">
+<link href="{{ secure_asset('/css/commons/list.css') }}" rel="stylesheet">
 
 @section('content')
     
@@ -18,7 +19,7 @@
     </section>
     
     
-    <section class="wrapper">
+    <section class="table">
         @if(count($recipes) > 0)
             <div class="row" id="top1738">
                 <div class="col-sm-12">
@@ -30,7 +31,7 @@
                             @if(!$recipe->user_id == null)
                                 @if(Auth::check())
                                     <tr>
-                                        <td class="auth_recipeTitle"><span>{!! link_to_route("recipeListShow.get", "$recipe->title", ["id" => $recipe->id]); !!}</span></td>
+                                        <td class="auth_title"><span>{!! link_to_route("recipeListShow.get", "$recipe->title", ["id" => $recipe->id]); !!}</span></td>
                                     </tr>
                                     <tr class="favorite">
                                         @if (Auth::user()->already_been_favorite($recipe->id))
@@ -45,7 +46,7 @@
                                     </tr>
                                 @else
                                     <tr>
-                                        <td class="not_auth_recipeTitle"><span>{!! link_to_route("recipeListShow.get", "$recipe->title", ["id" => $recipe->id]); !!}</span></td>   
+                                        <td class="not_auth_title"><span>{!! link_to_route("recipeListShow.get", "$recipe->title", ["id" => $recipe->id]); !!}</span></td>   
                                     </tr>
                                 @endif
                             @endif
@@ -55,7 +56,7 @@
             </div>
             <a href="#top1738">Top Of Recipe List</a>
         @else
-            <div class="not_recipes">
+            <div class="not_anything">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="text-center">

@@ -9,11 +9,9 @@
     @include('commons.topSelect')
     
     <body>
-        <section class="top">
-            <div>
-                <img src="/Instant_Chef_img/top.jpg" alt="台所" class="img">
-            </div>
-        </section>
+        <div class="top">
+            <img src="/Instant_Chef_img/top.jpg" alt="台所" class="img">
+        </div>
         
         <section class="explain">
             <p>料理にお困りの方、料理が大好きな方はいらっしゃいますか？</p>

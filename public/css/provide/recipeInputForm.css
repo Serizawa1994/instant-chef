@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.buttom h2{
+    margin-top:80px;
+    margin-bottom:80px;
+    border: 3px solid #ff4500;
+    border-radius:3px;
+}
+
+.buttom a{
+    color:#ff4500;
+    text-decoration:none;
+}
+
+.show span{
+    padding-left:10px;
+    font-size:15px;
+}
+
+.show .required{
+    color: #ff0000;
+}
