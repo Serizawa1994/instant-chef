@@ -25,7 +25,7 @@
                 <div class="col-sm-12">
                     <table class="table table-striped">
                         <tr class="title">
-                            <th class="text-center" colspan="2"><h1>RECIPE LIST</h1></th>
+                            <th class="text-center"><h1>RECIPE LIST</h1></th>
                         </tr>
                         @foreach($recipes as $recipe)
                             @if(!$recipe->user_id == null)

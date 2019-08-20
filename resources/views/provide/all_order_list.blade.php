@@ -23,7 +23,7 @@
                 <div class="col-sm-12">
                     <table class="table table-striped table-bordered">
                         <tr class="title">
-                            <th class="text-center" colspan="2"><h1>ORDER LIST</h1></th>
+                            <th class="text-center"><h1>ORDER LIST</h1></th>
                         </tr>
                         @if(!$plural_my_order == null)
                             @foreach($all_order as $order)
