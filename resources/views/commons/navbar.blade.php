@@ -1,8 +1,4 @@
-<style>
-    #navbar2149 .col-sm-2{
-        padding: 0;
-    }
-</style>
+<link href="{{ secure_asset('/css/commons_folder.css') }}" rel="stylesheet">
 
 <aside style="margin-top:30px;">
     <nav class="navbar navbar-expand-sm navbar-light">

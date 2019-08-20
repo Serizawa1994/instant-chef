@@ -100,8 +100,12 @@
                                 @if(Auth::check())
                                     {!! link_to_route("recipeList.get", "レシピ一覧を見る", [], ["class" => "btn btn-lg btn-primary", "style" => "background-color: #ff4500; border-style: none; color: #ffffff;width:75%; margin-top:40px; margin-bottom:50px;"]) !!} 
                                 @else
-                                    <p class="not_login"><strong>ログインなしでご利用できます</strong></p>
-                                    {!! link_to_route("recipeList.get", "レシピ一覧を見る", [], ["class" => "btn btn-lg btn-primary", "style" => "background-color: #ff4500; border-style: none; color: #ffffff; width:75%; margin-top:20px; margin-bottom:20px;"]) !!} 
+                                    <section  class="not_login">
+                                        <p><strong>ログインなしでご利用できます</strong></p>
+                                        <div>
+                                        {!! link_to_route("recipeList.get", "レシピ一覧を見る", [], ["class" => "btn btn-lg btn-primary", "style" => "background-color: #ff4500; border-style: none; color: #ffffff; width:75%; margin-top:20px; margin-bottom:20px;"]) !!} 
+                                        </div>
+                                    </section>
                                 @endif
                             </div>
                         </div>
