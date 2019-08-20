@@ -5,6 +5,12 @@
     border-right: 3px solid #ff4500;
 }
 
+.table .not_auth_title{
+    border-left: 3px solid #ff4500;
+    border-right: 3px solid #ff4500;
+    border-bottom: 3px solid #ff4500;
+}
+
 
 .table .favorite .text-center{
     border-left: 3px solid #ff4500;
