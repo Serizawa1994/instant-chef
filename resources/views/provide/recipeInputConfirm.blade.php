@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 <link href="{{ secure_asset('/css/commons/show.css') }}" rel="stylesheet">
-<link href="{{ secure_asset('/css/provide/recipeInputConfirm.css') }}" rel="stylesheet">
 
 @section('content')
 

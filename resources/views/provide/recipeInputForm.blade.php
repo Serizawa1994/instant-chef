@@ -13,7 +13,7 @@
     
     <section class="buttom">
         <div class="text-center">
-            <p><h2><a href="#order1543">PROVIDE</a></h2></p>
+            <p><h2 class="buttomName"><a href="#order1543">PROVIDE</a></h2></p>
         </div>
     </section>
     

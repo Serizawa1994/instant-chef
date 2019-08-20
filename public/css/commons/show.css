@@ -5,7 +5,15 @@
     margin-top:50px;
 }
 
+.top h1{
+    margin-top:80px;
+    margin-bottom:80px;
+    border: 3px solid #ff4500;
+    border-radius:3px;
+}
+
 .show .item{
+    margin-top: 10px;
     border: 3px solid #ff4500;
     border-radius:3px;
     background-color:#ff4500;
@@ -24,4 +32,16 @@
     background-color:#ffe4c4;
     color:#000000;
     font-size:25px;
+}
+
+.buttom .buttomName{
+    margin-top:80px;
+    margin-bottom:80px;
+    border: 3px solid #ff4500;
+    border-radius:3px;
+}
+
+.buttom a{
+    color:#ff4500;
+    text-decoration:none;
 }
