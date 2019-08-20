@@ -1,37 +1,39 @@
 @extends('layouts.app')
 
+<link href="{{ secure_asset('/css/commons/show.css') }}" rel="stylesheet">
+
 @section('content')
 
     @include('commons.orderSelect')
     
-    <section>
+    <section  class="top">
         <div class="text-center">
-            <p><h1  style="margin-top:80px; margin-bottom:80px; border: 3px solid #ff4500; border-radius:3px;">CONFIRMATION</h1></p>
+            <p><h1>CONFIRMATION</h1></p>
         </div>
     </section>
     
-    <section>
+    <section class="show">
         {!! Form::model($request,['route' => 'orderInputStore.post']) !!}
             <div class="row">
                 <div class="col-sm-12">
                     <div>
-                        <p style="border: 3px solid #ff4500; border-radius:3px; background-color:#ff4500; color:#ffffff;"><h2 style="background-color:#f5deb3; border-radius:3px; padding-left:10px;">Capability</h2></p>
-                        <p>{!! nl2br(e($request->capability)) !!}</p>
+                        <p class="item"><h2>Capability</h2></p>
+                        {!! nl2br(e($request->capability)) !!}
                     </div>
         
                     <div>
-                        <p style=" border: 3px solid #ff4500; border-radius:3px; background-color:#ff4500; color:#ffffff;"><h2 style="background-color:#f5deb3; border-radius:3px; padding-left:10px;">Ingredient</h2></p>
-                        <p>{!! nl2br(e($request->ingredient)) !!}</p>
+                        <p class="item"><h2>Ingredient</h2></p>
+                        {!! nl2br(e($request->ingredient)) !!}
                     </div>
         
                     <div>
-                        <p style="border: 3px solid #ff4500; border-radius:3px; background-color:#ff4500; color:#ffffff;"><h2 style="background-color:#f5deb3; border-radius:3px; padding-left:10px;">Outline</h2></p>
-                        <p>{!! nl2br(e($request->outline)) !!}</p>
+                        <p class="item"><h2>Outline</h2></p>
+                        {!! nl2br(e($request->outline)) !!}
                     </div>
         
                     <div>
-                        <p style="border: 3px solid #ff4500; border-radius:3px; background-color:#ff4500; color:#ffffff;"><h2 style="background-color:#f5deb3; border-radius:3px; padding-left:10px;">Detail</h2></p>
-                        <p>{!! nl2br(e($request->details)) !!}</p>
+                        <p class="item"><h2>Detail</h2></p>
+                        {!! nl2br(e($request->details)) !!}
                     </div>
                 </div>
             </div>
